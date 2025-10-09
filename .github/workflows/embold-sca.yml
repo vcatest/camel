@@ -11,7 +11,7 @@ on:
   workflow_dispatch: 
 
 jobs:
-  embold-scan_fc:
+  embold-sca:
     # Use the latest version of Ubuntu to run the job
     runs-on: ubuntu-latest
 
