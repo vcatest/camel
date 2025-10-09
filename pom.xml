@@ -357,6 +357,7 @@
                                 </excludes>
                             </licenseSet>
                         </licenseSets>
+                        
                         <mapping>
                             <Adapter>CAMEL_PROPERTIES_STYLE</Adapter>
                             <conf>SCRIPT_STYLE</conf>
