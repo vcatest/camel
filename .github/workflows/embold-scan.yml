@@ -8,6 +8,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch: 
 
 jobs:
   embold-scan:
@@ -36,7 +37,7 @@ jobs:
           EMBOLD_TOKEN: ${{ secrets.EMBOLD_SCAN_TOKEN }}
         run: |
           ./browserstack-codequality-scanner/bin/embold-scanner analyse \
-            -u http://3.66.212.6:3000 \
+            -u http://3.66.212.6:3000/ \
             -t $EMBOLD_TOKEN \
             -r b38574d3f30568745417256b73b2b6df \
             -b . \
