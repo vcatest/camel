@@ -1,6 +1,6 @@
-# .github/workflows/embold-scan_fc.yml
+# .github/workflows/embold-scan.yml
 
-name: Embold Code Quality Scan
+name: Embold Code Quality Scan with FC
 
 # This workflow runs on every push to the 'main' branch
 on:
@@ -29,7 +29,7 @@ jobs:
       # Step 3: Download the repository configuration file using a secure token
       - name: Download Repository Configuration
         run: |
-          curl --silent --location --request GET "http://18.184.13.138:3089/api/v1/repositories/3807374fa1dd468b04a14cc8e5fc4873/scans/config/download" --header "Authorization: Bearer ${{ secrets.EMBOLD_SCAN_TOKEN_FC }}" -o repository-configuration.json
+          curl --silent --location --request GET "http://18.184.13.138:3089/api/v1/repositories/b38574d3f30568745417256b73b2b6df/scans/config/download" --header "Authorization: Bearer ${{ secrets.EMBOLD_SCAN_TOKEN_FC }}" -o repository-configuration.json
 
       # Step 4: Run the Embold analysis scanner
       - name: Run Embold Scanner
@@ -39,7 +39,7 @@ jobs:
           ./browserstack-codequality-scanner/bin/embold-scanner analyse \
             -u http://18.184.13.138:3089 \
             -t $EMBOLD_TOKEN \
-            -r 3807374fa1dd468b04a14cc8e5fc4873 \
+            -r b38574d3f30568745417256b73b2b6df \
             -b . \
             -d ./embold-data \
             -c ./repository-configuration.json \
