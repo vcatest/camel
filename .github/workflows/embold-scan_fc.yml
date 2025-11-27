@@ -23,7 +23,7 @@ jobs:
       # Step 2: Download and extract the Embold scanner
       - name: Download and Extract Scanner
         run: |
-          curl https://v1.embold.io/nfs/CLI/browserstack-codequality-scanner.tar.gz -o browserstack-codequality-scanner-archive.tar.gz
+          curl ${{ vars.EMBOLD_SCANNER_URL }} -o browserstack-codequality-scanner-archive.tar.gz
           tar xvf browserstack-codequality-scanner-archive.tar.gz
 
       # #Step 3: Download the repository configuration file using a secure token
