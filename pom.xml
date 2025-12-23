@@ -141,7 +141,7 @@
         <enforcer.phase>none</enforcer.phase><!-- We do not enforce with -Dquickly, the property is overridden in the full profile -->
 
         <os.detected.classifier>${nisse.os.classifier}</os.detected.classifier>
-        <sonar.organization>spyd3r98</sonar.organization>
+        <sonar.organization>vcatest</sonar.organization>
     </properties>
 
     <!-- Comment out the snapshot repositories as we don't need them now -->
